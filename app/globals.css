@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) * .6);
+  --radius-md: calc(var(--radius) * .8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+:root { --background: #f7f5ef; --foreground: #172326; --border: #d8c7aa; --ring: #39b7c4; --radius: .625rem; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #f7f5ef; color: #172326; font-family: Arial, Helvetica, sans-serif; }
+.font-serif { font-family: Georgia, 'Times New Roman', serif; }
+.eyebrow { font-size: .7rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: #075e68; }
+.contact-input { display: block; width: 100%; margin-top: .6rem; border: 1px solid rgba(255,255,255,.2); border-radius: .75rem; background: rgba(255,255,255,.07); padding: .75rem .9rem; color: white; outline: none; transition: border-color .2s, background .2s; }
+.contact-input:focus { border-color: #39b7c4; background: rgba(255,255,255,.12); }
+@media (prefers-reduced-motion: no-preference) { a, button { transition-duration: .2s; } }
+::selection { background: #39b7c4; color: #062f3d; }
